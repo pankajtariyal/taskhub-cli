@@ -13,9 +13,10 @@ public class Task {
 
 
     @SuppressWarnings("unused")
-    public Task(){}
+    public Task() {
+    }
 
-    public Task(int id,String title,TaskStatus status){
+    public Task(int id, String title, TaskStatus status) {
         this.id = id;
         this.title = title;
         this.created_at = LocalDateTime.now();
@@ -65,6 +66,9 @@ public class Task {
 
     @Override
     public String toString() {
-        return "["+this.id+"]\t" + this.title+" | "  + this.created_at.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"))+" | " +this.updated_at.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"))+" | " + this.status;
+        return "[" + this.id + "]\t" + this.title + " | " +
+                this.created_at.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss")) + " | " +
+                this.updated_at.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss")) + " | " +
+                this.status;
     }
 }
